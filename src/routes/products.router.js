@@ -19,7 +19,7 @@ router.get("/products",ensureAuthenticated(ROL_USER) ,getAllProducts);
 router.get("/product/:pid", findProductById);
 
 // Endpoint para agregar un producto
-router.post("/product", ensureAuthenticated(ROL_ADMIN), addControllerProduct);
+router.post("/product", addControllerProduct);
 
 // Endpoint para actualizar un producto
 router.put("/product/:pid", ensureAuthenticated(ROL_ADMIN),updateByIdControllers);
